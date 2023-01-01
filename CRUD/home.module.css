@@ -98,9 +98,9 @@ body{
 #main{
     height: 100vh;
     width: 100%;
-    display: flex;      /*To bring the content horizontally*/
+    display: flex;      
     justify-content: space-around;
-    align-items: center;        /*To bring vertically center*/
+    align-items: center;        
     flex-wrap: wrap;
 
 }
