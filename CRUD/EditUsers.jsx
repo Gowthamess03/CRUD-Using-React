@@ -12,11 +12,11 @@ const EditUsers = () => {
 
     let {index}=useParams()
 
-    useEffect(()=>{         /*To fetch a particular data we are using useEffect from react-router-dom */
+    useEffect(()=>{         
       axios.get(`http://localhost:3000/user/${index}`)
       .then((response)=>{
         console.log(response.data);
-        setName(response.data.name)   //setName is used to change value of data
+        setName(response.data.name)   
         setSalary(response.data.salary)
         setCompany(response.data.company)
       })
@@ -24,7 +24,7 @@ const EditUsers = () => {
 
     let formhandle=()=>{
       let payload={name,salary,company}
-      axios.put(`http://localhost:3000/user/${index}` ,payload)   //This payload contains updated data like name,sal,com
+      axios.put(`http://localhost:3000/user/${index}` ,payload)   
       .then(()=>{
         console.log("Data Has Been Updated");
       })
