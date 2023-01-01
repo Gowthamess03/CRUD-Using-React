@@ -7,13 +7,13 @@ const CreateUser = () => {
   let [name,setName]=useState("")
   let [salary,setSalary]=useState("")
   let [company,setCompany]=useState("")
-  let navigate=useNavigate() /*useNavigate hook-It is used to redirect to the path we give it in parameter */
+  let navigate=useNavigate() 
 
   let formhandle=(e)=>{
-    e.preventDefault()  //To prevent the auto refresh
-    console.log(name,salary,company); //To print the user's data in console
-    let payload={name,salary,company} //To store the user's data
-    axios.post("http://localhost:3000/user",payload)/*axios.post(particular API)-here we are giving the data.In the second argument we pass the user's data*/
+    e.preventDefault()  
+    console.log(name,salary,company); 
+    let payload={name,salary,company} 
+    axios.post("http://localhost:3000/user",payload)
     .then(()=>{
       console.log("Data Has Been Added");
     })
@@ -38,7 +38,5 @@ const CreateUser = () => {
     </section>
   )
 }
-/* e.target.value is control form */
-/*To print the user entered data in console for that we need to use onsubmit(Use inside form) or onclick(Use inside )*/
 
 export default CreateUser
